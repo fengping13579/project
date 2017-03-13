@@ -105,7 +105,8 @@
 初始化然后，执行init命令初始化hexo,命令：
 1hexo init
 好啦，至此，全部安装工作已经完成！Blog就是你的博客根">
-<meta property="og:updated_time" content="2017-03-13T13:46:25.000Z">
+<meta property="og:image" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/图片地址">
+<meta property="og:updated_time" content="2017-03-13T13:48:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速构建hexo个人博客">
 <meta name="twitter:description" content="此说明建立在Node和Git都安装好的基础上,首先创建一个文件夹,如log,用户存放hexo的配置文件,然后进入blog里安装Hexo。
@@ -115,6 +116,7 @@
 初始化然后，执行init命令初始化hexo,命令：
 1hexo init
 好啦，至此，全部安装工作已经完成！Blog就是你的博客根">
+<meta name="twitter:image" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/图片地址">
 
 
 
@@ -303,7 +305,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T21:46:25+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T21:48:35+08:00">
                 2017-03-13
               </time>
             
@@ -371,17 +373,19 @@
 <p>hexo g  是 hexo generate 的缩写</p>
 <p>hexo d  是 hexo deploy  的缩写</p>
 <p>一些常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new&quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page&quot;pageName&quot; #新建页面</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate #生成静态页面至public目录</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy #将.deploy目录部署到GitHub</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo help # 查看帮助</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version #查看Hexo的版本</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">hexo new&quot;postName&quot; #新建文章</div><div class="line"></div><div class="line">hexo new page&quot;pageName&quot; #新建页面</div><div class="line"></div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line"></div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line"></div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line"></div><div class="line">hexo help # 查看帮助</div><div class="line"></div><div class="line">hexo version #查看Hexo的版本</div></pre></td></tr></table></figure>
 <h1 id="添加新文章的方法"><a href="#添加新文章的方法" class="headerlink" title="添加新文章的方法"></a>添加新文章的方法</h1><h3 id="hexo-new’xxx’之后找到source文件件。在里面找到对应的-xxx-md文件"><a href="#hexo-new’xxx’之后找到source文件件。在里面找到对应的-xxx-md文件" class="headerlink" title="hexo new’xxx’之后找到source文件件。在里面找到对应的 xxx.md文件"></a>hexo new’xxx’之后找到source文件件。在里面找到对应的 xxx.md文件</h3><p><strong>md文件编辑方法</strong></p>
 <p>Markdown语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">1、分段： 两个回车</div><div class="line"></div><div class="line">2、换行 两个空格 + 回车</div><div class="line"></div><div class="line">3、标题 # ~ ###### 井号的个数表示几级标题，即Markdown可以表示一级标题到六级标题</div><div class="line"></div><div class="line">4、引用 &gt;</div><div class="line"></div><div class="line">5、列表 * ， + ， - ， 1. ，选其中之一，注意后面有个空格</div><div class="line"></div><div class="line">6、代码区块 四个空格 开头</div><div class="line"></div><div class="line">7、链接 [ 文字 ]( 链接地址 )</div><div class="line"></div><div class="line">8、图片 ![ 图片说明 ]( 图片地址 ) ，图片地址可以是本地路劲，也可以是网络地址</div><div class="line"></div><div class="line">9、强调 **文字** ， __文字__ ， _文字_ ， *文字*</div><div class="line"></div><div class="line">10、代码 ```，</div></pre></td></tr></table></figure>
-<p> ```</p>
+<p> 1、分段： 两个回车</p>
+<p> 2、换行 两个空格 + 回车</p>
+<p> 3、标题 # ~ ###### 井号的个数表示几级标题，即Markdown可以表示一级标题到六级标题</p>
+<p> 4、引用 &gt;</p>
+<p> 5、列表 * ， + ， - ， 1. ，选其中之一，注意后面有个空格</p>
+<p> 6、代码区块 四个空格 开头</p>
+<p> 7、链接 <a href="链接地址"> 文字 </a></p>
+<p> 8、图片 <img src="图片地址" alt=" 图片说明 "> ，图片地址可以是本地路劲，也可以是网络地址</p>
+<p> 9、强调 <strong>文字</strong> ， <strong>文字</strong> ， <em>文字</em> ， <em>文字</em></p>
+<p> 10、代码 <code>，</code></p>
 <p>更多详情 请参考 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a>。下面就开启你的个人博客之旅吧。。</p>
 
       
