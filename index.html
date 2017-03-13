@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -204,7 +204,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -284,9 +284,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T16:59:55+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T17:02:08+08:00">
                 2017-03-13
               </time>
             
@@ -348,27 +348,38 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>然后，执行配置命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>然后再浏览器中输入  <figure class="highlight plain"><figcaption><span>就行了，我的github的账户叫ping13579,把这个改成你github的账户名就行了</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">部署步骤 即更新步骤</div><div class="line"></div><div class="line">**每次部署的步骤，可按以下三步来进行。**</div></pre></td></tr></table></figure></p>
-<pre><code>hexo clean
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<pre><code>hexo generate
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<pre><code>hexo deploy
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">也可使用下面</div><div class="line"></div><div class="line">hexo g  是 hexo generate 的缩写</div><div class="line"></div><div class="line">hexo d  是 hexo deploy  的缩写</div><div class="line"></div><div class="line">一些常用命令：</div></pre></td></tr></table></figure>
-<p>hexo new”postName” #新建文章</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo new page”pageName” #新建页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo generate #生成静态页面至public目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo server #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo deploy #将.deploy目录部署到GitHub</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo help # 查看帮助</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>hexo version #查看Hexo的版本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">hexo new&apos;xxx&apos;之后找到source文件件。在里面找到对应的 xxx.md文件</div><div class="line"></div><div class="line">**md文件编辑方法**</div><div class="line"></div><div class="line">Markdown语法</div><div class="line"></div><div class="line"></div><div class="line">&gt; 1、分段： 两个回车</div><div class="line"></div><div class="line">&gt; 2、换行 两个空格 + 回车</div><div class="line"></div><div class="line">&gt; 3、标题 # ~ ###### 井号的个数表示几级标题，即Markdown可以表示一级标题到六级标题</div><div class="line"></div><div class="line">&gt; 4、引用 &gt;</div><div class="line"></div><div class="line">&gt; 5、列表 * ， + ， - ， 1. ，选其中之一，注意后面有个空格</div><div class="line"></div><div class="line">&gt; 6、代码区块 四个空格 开头</div><div class="line"></div><div class="line">&gt; 7、链接 [文字](链接地址)</div><div class="line"></div><div class="line">&gt; 8、图片 ![图片说明](图片地址) ，图片地址可以是本地路劲，也可以是网络地址</div><div class="line"></div><div class="line">&gt; 9、强调 **文字** ， __文字__ ， _文字_ ， *文字*</div><div class="line"></div><div class="line">&gt; 10、代码 ```，</div></pre></td></tr></table></figure>
+<p>然后再浏览器中输入  <a href="https://ping13579.github.io/">https://ping13579.github.io/</a>  就行了，我的github的账户叫ping13579,把这个改成你github的账户名就行了</p>
+<p>部署步骤 即更新步骤</p>
+<p><strong>每次部署的步骤，可按以下三步来进行。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>也可使用下面</p>
+<p>hexo g  是 hexo generate 的缩写</p>
+<p>hexo d  是 hexo deploy  的缩写</p>
+<p>一些常用命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new&quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new page&quot;pageName&quot; #新建页面</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate #生成静态页面至public目录</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy #将.deploy目录部署到GitHub</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo help # 查看帮助</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version #查看Hexo的版本</div></pre></td></tr></table></figure>
+<p>hexo new’xxx’之后找到source文件件。在里面找到对应的 xxx.md文件</p>
+<p><strong>md文件编辑方法</strong></p>
+<p>Markdown语法</p>
+<blockquote>
+<p>1、分段： 两个回车</p>
+<p>2、换行 两个空格 + 回车</p>
+<p>3、标题 # ~ ###### 井号的个数表示几级标题，即Markdown可以表示一级标题到六级标题</p>
+<p>4、引用 &gt;</p>
+<p>5、列表 * ， + ， - ， 1. ，选其中之一，注意后面有个空格</p>
+<p>6、代码区块 四个空格 开头</p>
+<p>7、链接 <a href="链接地址">文字</a></p>
+<p>8、图片 <img src="图片地址" alt="图片说明"> ，图片地址可以是本地路劲，也可以是网络地址</p>
+<p>9、强调 <strong>文字</strong> ， <strong>文字</strong> ， <em>文字</em> ， <em>文字</em></p>
+<p>10、代码 <code>，</code></p>
+</blockquote>
 <p>更多详情 请参考 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a>。下面就开启你的个人博客之旅吧。。</p>
 
           
@@ -447,7 +458,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T16:10:09+08:00">
                 2017-03-13
@@ -568,7 +579,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T13:41:09+08:00">
                 2017-03-13
@@ -694,7 +705,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -748,7 +759,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
