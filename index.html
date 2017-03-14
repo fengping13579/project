@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -287,7 +287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-14T07:59:21+08:00">
                 2017-03-14
@@ -421,7 +421,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/13/second-edit/" itemprop="url">
-                  Untitled
+                  关于git 使用的若干个坑
                 </a>
               
             
@@ -435,7 +435,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T17:06:27+08:00">
                 2017-03-13
@@ -475,7 +475,18 @@
       
         
           
-            
+            <h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><p>有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直</p>
+<p>ERROR: Permission to XXX.git denied to aaa.</p>
+<p>这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，</p>
+<p>终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行</p>
+<h1 id="解决方法只需四部"><a href="#解决方法只需四部" class="headerlink" title="解决方法只需四部"></a>解决方法只需四部</h1><h2 id="第一、打开搜索功能查找-Keychain-Access-app-。"><a href="#第一、打开搜索功能查找-Keychain-Access-app-。" class="headerlink" title="第一、打开搜索功能查找  Keychain Access.app 。"></a>第一、打开搜索功能查找  Keychain Access.app 。</h2><h2 id="第二、点击所有项目。"><a href="#第二、点击所有项目。" class="headerlink" title="第二、点击所有项目。"></a>第二、点击所有项目。</h2><h2 id="第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。"><a href="#第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。" class="headerlink" title="第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。"></a>第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。</h2><h2 id="第四、将项目重现git-push-上去。成功。"><a href="#第四、将项目重现git-push-上去。成功。" class="headerlink" title="第四、将项目重现git push 上去。成功。"></a>第四、将项目重现git push 上去。成功。</h2><ul>
+<li>跳过的小坑。</li>
+</ul>
+<p>有些项目不能一下全部删掉。。需要你慢慢研究删除方法，，我当时在密码和秘钥那找到跟我冲突的账号一顿删，最后成功删除。</p>
+<h1 id="git-push-的时候注意事项，"><a href="#git-push-的时候注意事项，" class="headerlink" title="git push 的时候注意事项，"></a>git push 的时候注意事项，</h1><p>之前选择的是a 仓库，git push 失败，出现上面的那个问题，等你解决好成功后你想推到b 仓库地址，你会发现，你其实还是推到了a仓库地址，</p>
+<p>人家会保留你第一次的地址，怎么处理，</p>
+<h2 id="需要取消第一次的git-init"><a href="#需要取消第一次的git-init" class="headerlink" title="需要取消第一次的git init"></a>需要取消第一次的git init</h2><p>一步搞定。。rm -rf .git 删除之前的.git 文件，重新git init 一下就OK了。。</p>
+
           
         
       
@@ -552,7 +563,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T16:10:09+08:00">
                 2017-03-13
@@ -672,7 +683,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T13:41:09+08:00">
                 2017-03-13
@@ -798,7 +809,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -852,7 +863,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
