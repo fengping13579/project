@@ -159,7 +159,7 @@
 
         
         <a href="/2017/03/15/introduce/" class="archive-article-date">
-  	<time datetime="2017-03-15T02:50:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+  	<time datetime="2017-03-15T06:12:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
 </a>
         
       </header>
@@ -169,34 +169,9 @@
         <p>此说明建立在Node和Git都安装好的基础上,首先创建一个文件夹,如Blog,用户存放hexo的配置文件,然后进入Blog里安装Hexo。</p>
 <h2 id="执行如下命令安装Hexo："><a href="#执行如下命令安装Hexo：" class="headerlink" title="执行如下命令安装Hexo："></a>执行如下命令安装Hexo：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure>
 <h2 id="初始化然后，执行init命令初始化hexo-命令："><a href="#初始化然后，执行init命令初始化hexo-命令：" class="headerlink" title="初始化然后，执行init命令初始化hexo,命令："></a>初始化然后，执行init命令初始化hexo,命令：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
-<p>好啦，至此，全部安装工作已经完成！Blog就是你的博客根目录，所有的操作都在里面进行。</p>
-<p>生成静态页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate（hexo g也可以）</div></pre></td></tr></table></figure>
-<h2 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h2><p>启动本地服务，进行文章预览调试，命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
-<p>浏览器输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
-<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><h3 id="建立Repository"><a href="#建立Repository" class="headerlink" title="建立Repository"></a>建立Repository</h3><p>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】，固定写法建立关联，</p>
-<p>现在我们需要_config.yml文件，来建立关联，命令：</p>
-<p>打开工程找到_config.yml文件，</p>
-<p>翻到最下面，改成我这样子的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">     type: git</div><div class="line">     repo: https://github.com/ping13579/ping13579.github.io.git</div><div class="line">     branch: master</div></pre></td></tr></table></figure>
-<p>然后执行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>然后，执行配置命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>然后再浏览器中输入  <a href="https://ping13579.github.io/" target="_blank" rel="external">https://ping13579.github.io/</a>  就行了，我的github的账户叫ping13579,把这个改成你github的账户名就行了</p>
-<p>部署步骤 即更新步骤</p>
-<p><strong>每次部署的步骤，可按以下三步来进行。</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>也可使用下面</p>
-<p>hexo g  是 hexo generate 的缩写</p>
-<p>hexo d  是 hexo deploy  的缩写</p>
-<p>一些常用命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">hexo new&quot;postName&quot; #新建文章</div><div class="line"></div><div class="line">hexo new page&quot;pageName&quot; #新建页面</div><div class="line"></div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line"></div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line"></div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line"></div><div class="line">hexo help # 查看帮助</div><div class="line"></div><div class="line">hexo version #查看Hexo的版本</div></pre></td></tr></table></figure>
-<h1 id="添加新文章的方法"><a href="#添加新文章的方法" class="headerlink" title="添加新文章的方法"></a>添加新文章的方法</h1><h3 id="hexo-new’xxx’之后找到source文件件。在里面找到对应的-xxx-md文件"><a href="#hexo-new’xxx’之后找到source文件件。在里面找到对应的-xxx-md文件" class="headerlink" title="hexo new’xxx’之后找到source文件件。在里面找到对应的 xxx.md文件"></a>hexo new’xxx’之后找到source文件件。在里面找到对应的 xxx.md文件</h3><p><strong>md文件编辑方法</strong></p>
-<p>请参考 <a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a>。下面就开启你的个人博客之旅吧。。</p>
-<h2 id="头像设置方法"><a href="#头像设置方法" class="headerlink" title="头像设置方法"></a>头像设置方法</h2><p>下了几个版本的主题 landscape next pacman yilia  发现有几个版本都有头像问题。愚钝的我开始在根目录下各种更改_config.yml文件配置，<br>但最后发现应该在各个主题的_config.yml修改配置，本人也是够愚钝的。希望大家不要跟我一样哦。<br>经过各种版本的比较。发现。。yilia主题最好用了。。板式也是最符合心意的。。分页。。上下页导航，评论区。等等。大家也可以各种比较一下</p>
-
+        
+          <a class="article-more-a" href="/2017/03/15/introduce/#more">more >></a>
+        
       
 
       
@@ -209,6 +184,62 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/15/introduce/">More >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/15/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/15/hello-world/" class="archive-article-date">
+  	<time datetime="2017-03-15T06:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/03/15/hello-world/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/15/hello-world/">More >></a>
         </p>
       
 
@@ -247,12 +278,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="如何删除-idea文件"><a href="#如何删除-idea文件" class="headerlink" title="如何删除.idea文件"></a>如何删除.idea文件</h2><h4 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h4><p>idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。<br>每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，<br>后来终于发现了删除后不再生成的秘密。。</p>
-<h3 id="删除法"><a href="#删除法" class="headerlink" title="删除法"></a>删除法</h3><p>第一步、在工程的根目录下建立一个.gitignore ..这个文件的放置地方很重要，放在其他地方都没有，<br>之前删不掉就是因为路径放错了，</p>
-<p>如果在git push 之前第一步做好了那第二步也就不需要了，，我们现在说的是线上已经有了.idea文件夹</p>
-<p>第二步、删除.idea 文件夹，有两种方法，1、线上git仓库直接删除，不知道的可以百度，2、git pull 拉取线上代码本地删除。用rm -rf 删除</p>
-<p>第三步、将 .gitignore文件提交到远程。自此完成删除工作。</p>
-<p>注：如有不成功可联系我。暂未开通评论功能，敬请等待。。</p>
-
+        
+          <a class="article-more-a" href="/2017/03/14/idea/#more">more >></a>
+        
       
 
       
@@ -303,12 +331,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><p>有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直<br>ERROR: Permission to XXX.git denied to aaa.<br>这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，<br>终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行</p>
-<h3 id="解决方法只需四部"><a href="#解决方法只需四部" class="headerlink" title="解决方法只需四部"></a>解决方法只需四部</h3><h4 id="第一、打开搜索功能查找-Keychain-Access-app-。"><a href="#第一、打开搜索功能查找-Keychain-Access-app-。" class="headerlink" title="第一、打开搜索功能查找  Keychain Access.app 。"></a>第一、打开搜索功能查找  Keychain Access.app 。</h4><h4 id="第二、点击所有项目。"><a href="#第二、点击所有项目。" class="headerlink" title="第二、点击所有项目。"></a>第二、点击所有项目。</h4><h4 id="第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。"><a href="#第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。" class="headerlink" title="第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。"></a>第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。</h4><h4 id="第四、将项目重现git-push-上去。成功。"><a href="#第四、将项目重现git-push-上去。成功。" class="headerlink" title="第四、将项目重现git push 上去。成功。"></a>第四、将项目重现git push 上去。成功。</h4><p>*跳过的小坑。</p>
-<p>有些项目不能一下全部删掉。。需要你慢慢研究删除方法，，我当时在密码和秘钥那找到跟我冲突的账号一顿删，最后成功删除。</p>
-<h2 id="git-push-的时候注意事项，"><a href="#git-push-的时候注意事项，" class="headerlink" title="git push 的时候注意事项，"></a>git push 的时候注意事项，</h2><p>之前选择的是a 仓库，git push 失败，出现上面的那个问题，等你解决好成功后你想推到b 仓库地址，你会发现，你其实还是推到了a仓库地址，</p>
-<p>人家会保留你第一次的地址，怎么处理，</p>
-<h3 id="需要取消第一次的git-init"><a href="#需要取消第一次的git-init" class="headerlink" title="需要取消第一次的git init"></a>需要取消第一次的git init</h3><p>一步搞定。。rm -rf .git 删除之前的.git 文件，重新git init 一下就OK了。。</p>
-
+        
+          <a class="article-more-a" href="/2017/03/13/second-edit/#more">more >></a>
+        
       
 
       
@@ -374,65 +399,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/03/13/first-edit/">More >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/13/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-13T05:41:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/13/hello-world/">More >></a>
         </p>
       
 

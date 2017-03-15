@@ -8,19 +8,16 @@
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
   <title>关于git 使用的若干个坑 | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行
-解决方法只需四部第一">
+  <meta name="description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于git 使用的若干个坑">
 <meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/13/second-edit/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行
-解决方法只需四部第一">
-<meta property="og:updated_time" content="2017-03-14T07:56:38.000Z">
+<meta property="og:description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行">
+<meta property="og:updated_time" content="2017-03-15T06:12:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于git 使用的若干个坑">
-<meta name="twitter:description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行
-解决方法只需四部第一">
+<meta name="twitter:description" content="场景描述有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直ERROR: Permission to XXX.git denied to aaa.这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行">
   
   
     <link rel="icon" href="/favicon.png">
@@ -169,6 +166,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><p>有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直<br>ERROR: Permission to XXX.git denied to aaa.<br>这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，<br>终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行</p>
+<a id="more"></a>
 <h3 id="解决方法只需四部"><a href="#解决方法只需四部" class="headerlink" title="解决方法只需四部"></a>解决方法只需四部</h3><h4 id="第一、打开搜索功能查找-Keychain-Access-app-。"><a href="#第一、打开搜索功能查找-Keychain-Access-app-。" class="headerlink" title="第一、打开搜索功能查找  Keychain Access.app 。"></a>第一、打开搜索功能查找  Keychain Access.app 。</h4><h4 id="第二、点击所有项目。"><a href="#第二、点击所有项目。" class="headerlink" title="第二、点击所有项目。"></a>第二、点击所有项目。</h4><h4 id="第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。"><a href="#第三、在搜索栏查找git，将所有搜索出来的项目都删掉，-。" class="headerlink" title="第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。"></a>第三、在搜索栏查找git，将所有搜索出来的项目都删掉， 。</h4><h4 id="第四、将项目重现git-push-上去。成功。"><a href="#第四、将项目重现git-push-上去。成功。" class="headerlink" title="第四、将项目重现git push 上去。成功。"></a>第四、将项目重现git push 上去。成功。</h4><p>*跳过的小坑。</p>
 <p>有些项目不能一下全部删掉。。需要你慢慢研究删除方法，，我当时在密码和秘钥那找到跟我冲突的账号一顿删，最后成功删除。</p>
 <h2 id="git-push-的时候注意事项，"><a href="#git-push-的时候注意事项，" class="headerlink" title="git push 的时候注意事项，"></a>git push 的时候注意事项，</h2><p>之前选择的是a 仓库，git push 失败，出现上面的那个问题，等你解决好成功后你想推到b 仓库地址，你会发现，你其实还是推到了a仓库地址，</p>
