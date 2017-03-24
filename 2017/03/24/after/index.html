@@ -10,20 +10,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="对于添加分割线的方法
 此处有一种无需添加标签的方法
-如下">
+添加并删除多余的 如下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="添加分割线 after 伪元素的应用">
 <meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/24/after/index.html">
 <meta property="og:site_name" content="ping&liu">
 <meta property="og:description" content="对于添加分割线的方法
 此处有一种无需添加标签的方法
-如下">
-<meta property="og:updated_time" content="2017-03-24T10:30:06.000Z">
+添加并删除多余的 如下">
+<meta property="og:updated_time" content="2017-03-24T10:32:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="添加分割线 after 伪元素的应用">
 <meta name="twitter:description" content="对于添加分割线的方法
 此处有一种无需添加标签的方法
-如下">
+添加并删除多余的 如下">
   
   
     <link rel="icon" href="/favicon.png">
@@ -173,11 +173,11 @@
       
         <p>对于添加分割线的方法</p>
 <p>此处有一种无需添加标签的方法</p>
-<p>如下</p>
+<p>添加并删除多余的 如下</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.nav li:after &#123;</div><div class="line">    content:&quot;&quot;;</div><div class="line">    width:1px;</div><div class="line">    height:10px;</div><div class="line">    background-image:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.3),rgba(0,0,0,0));</div><div class="line">    position: absolute;</div><div class="line">    top:20px;</div><div class="line">    right:0px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>删除第一项和最后一项导航分隔线</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.nav li:last-child:after &#123;</div><div class="line">    content:&apos;&apos;;</div><div class="line">    width:0px;</div><div class="line">    height:0px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>删除第一项或者最后一项导航分隔线</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.nav li:first-child:after &#123;</div><div class="line">    content:&apos;&apos;;</div><div class="line">    width:0px;</div><div class="line">    height:0px;</div><div class="line">&#125;</div><div class="line">.nav li:last-child:after &#123;</div><div class="line">    content:&apos;&apos;;</div><div class="line">    width:0px;</div><div class="line">    height:0px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
