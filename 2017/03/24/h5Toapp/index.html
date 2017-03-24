@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>Archives: 2017/3 | ping&amp;liu</title>
+  <title>h5打开app方法 | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一次的停滞不前都是为了更高的飞跃">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ping&liu">
-<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/archives/2017/03/index.html">
+  <meta name="description" content="本章讲述的是如何通过h5 页面打开app 或者进入app 下载页面的一个通用js
+采用动态添加蒙罩层，css 也采用内联样式，通过判断各种环境做出不同操作。
+因为QQ内置浏览器不能打开第三方应用,QQ浏览器则可以。js 里有判断出手机QQ内置浏览器，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="h5打开app方法">
+<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/24/h5Toapp/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta property="og:description" content="本章讲述的是如何通过h5 页面打开app 或者进入app 下载页面的一个通用js
+采用动态添加蒙罩层，css 也采用内联样式，通过判断各种环境做出不同操作。
+因为QQ内置浏览器不能打开第三方应用,QQ浏览器则可以。js 里有判断出手机QQ内置浏览器，">
+<meta property="og:updated_time" content="2017-03-24T09:24:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ping&liu">
-<meta name="twitter:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta name="twitter:title" content="h5打开app方法">
+<meta name="twitter:description" content="本章讲述的是如何通过h5 页面打开app 或者进入app 下载页面的一个通用js
+采用动态添加蒙罩层，css 也采用内联样式，通过判断各种环境做出不同操作。
+因为QQ内置浏览器不能打开第三方应用,QQ浏览器则可以。js 里有判断出手机QQ内置浏览器，">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,36 +151,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-h5Toapp" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/24/h5Toapp/" class="archive-article-date">
-  	<time datetime="2017-03-24T09:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/24/h5Toapp/">h5打开app方法</a>
+    <h1 class="article-title" itemprop="name">
+      h5打开app方法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/03/24/h5Toapp/" class="archive-article-date">
+  	<time datetime="2017-03-24T09:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本章讲述的是如何通过h5 页面打开app 或者进入app 下载页面的一个通用js</p>
+<p>采用动态添加蒙罩层，css 也采用内联样式，通过判断各种环境做出不同操作。</p>
+<p>因为QQ内置浏览器不能打开第三方应用,QQ浏览器则可以。js 里有判断出手机QQ内置浏览器，</p>
+<a id="more"></a>
+<p>方法是我经过几款手机的navigator.userAgent对比最新研制出来的。也不知道是不是适用于所有机型。</p>
+<p>如有看到不适用机型烦请留言告知。不胜感谢！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">var app_down=&#123;</div><div class="line">    init:function(click_ele)&#123;</div><div class="line">        //点击事件、、、</div><div class="line">        $(click_ele).on(&quot;click&quot;,function() &#123;</div><div class="line">            var html =&quot;&lt;div class=&apos;clickBTnToApp&apos; style=&apos;position:fixed;top:0;z-index:99999;background-color: #1b2728;filter: alpha(opacity=80);opacity: .8;height:100%;width:100%;left:0;right:0;&apos;&gt;&quot; +</div><div class="line">                &quot;&lt;img src=&apos;http://cdn.ufenqi.com/cms/img/open_notice.png&apos; style=&apos;width: 60%;margin-top: 10%;text-align: right;margin-left: 32%;&apos;&gt;&quot; +</div><div class="line">                &quot;&lt;/div&gt;&quot;;</div><div class="line"></div><div class="line">            //判断环境。在微信中显示遮罩层。浏览器中则直接打开或者下载app</div><div class="line">            if(isWeixin())&#123;</div><div class="line">                $(&apos;body&apos;).append(html); //微信中也不能直接打开所以直接引导进去浏览器打开</div><div class="line">            &#125;else&#123;</div><div class="line">                app_down.open(html);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;);</div><div class="line">        //判断微信环境、、、</div><div class="line">        function isWeixin() &#123;</div><div class="line">            var ua = navigator.userAgent.toLowerCase();</div><div class="line">            return (ua.match(/MicroMessenger/i) == &quot;micromessenger&quot;);</div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    getUrlParam:function (name) &#123;</div><div class="line">        var reg = new RegExp(&quot;(^|&amp;)&quot; + name + &quot;=([^&amp;]*)(&amp;|$)&quot;);</div><div class="line">        var r = window.location.search.substr(1).match(reg);</div><div class="line">        if (r != null) return decodeURI(r[2]);</div><div class="line">        return null;</div><div class="line">    &#125;,</div><div class="line">    goTo:function()&#123;</div><div class="line">        var url=&apos;&apos;;</div><div class="line">        if(app_down.getUrlParam(&apos;t&apos;)==&apos;POST&apos; &amp;&amp; app_down.getUrlParam(&apos;code&apos;)!==&apos;&apos;)&#123;</div><div class="line">            var postCode = app_down.getUrlParam(&apos;code&apos;);</div><div class="line">            //alert(postCode);</div><div class="line">            url= &apos;&apos;; //进入指定页面的路径</div><div class="line">        &#125;else&#123;</div><div class="line">            url=&apos;&apos; //没有指定页面则进入app 的主页</div><div class="line">        &#125;</div><div class="line">        return url;</div><div class="line">    &#125;,</div><div class="line">    open:function(txt)&#123;</div><div class="line">        var ua = navigator.userAgent;</div><div class="line">        var Ua = navigator.userAgent.toLowerCase().toString();</div><div class="line">        if(ua.match(/iphone|ipad/i) != null)&#123;</div><div class="line">            if(Ua.indexOf(&apos;safari&apos;)== -1)&#123; // 判断是否是ios 手机QQ 内置浏览器 是的话进行引导去其他路径打开</div><div class="line">                $(&apos;body&apos;).append(txt);</div><div class="line">            &#125;else&#123;</div><div class="line">                location.href = app_down.goTo();</div><div class="line">                setTimeout(function()&#123;</div><div class="line">                    location.href = &apos;itms-apps://itunes.apple.com/cn/app/you-fen-qi/id983154074?mt=8&apos;;</div><div class="line">                &#125;,2000);</div><div class="line">            &#125;</div><div class="line">            return false;</div><div class="line">        &#125;else if(ua.match(/android/i) != null)&#123;</div><div class="line">            var url = app_down.goTo();</div><div class="line">            //alert(url);</div><div class="line">            if(Ua.indexOf(&apos;mobile safari&apos;)== -1)&#123; 判断是否安卓 手机QQ内置浏览器 是的话进行引导去其他路径打开</div><div class="line">                $(&apos;body&apos;).append(txt);</div><div class="line">            &#125;else&#123;</div><div class="line">                var ifr = document.createElement(&quot;iframe&quot;);</div><div class="line">                document.body.appendChild(ifr);</div><div class="line">                ifr.setAttribute(&apos;src&apos;, url);</div><div class="line">                ifr.setAttribute(&apos;style&apos;, &apos;display:none&apos;);</div><div class="line">                setTimeout(function()&#123;</div><div class="line">                    location.href = &apos;&apos;;//安卓下载包地址</div><div class="line">                &#125;,2000);</div><div class="line">            &#125;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>关于调用方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;../common/app_down.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    app_down.init($(&apos;.clickBtn&apos;))</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>不同环境有不同的引入方式。。可自行更改</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -197,149 +232,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/24/h5Toapp/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/24/fis3/" class="archive-article-date">
-  	<time datetime="2017-03-24T08:34:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-24</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/24/fis3/">fis3+node</a>
-    </h1>
+  
+    <a href="/2017/03/24/fis3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fis3+node</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="h5Toapp" data-title="h5打开app方法" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/24/h5Toapp/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">fis3</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/introduce/" class="archive-article-date">
-  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/introduce/">快速构建hexo个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/03/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/03/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -362,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
