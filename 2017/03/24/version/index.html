@@ -11,7 +11,7 @@
   <meta name="description" content="h5 与app 的交互越来越频繁。很多时候需要做一些兼容
 那么问题来了。。怎么做app 版本兼容判断呢
 app 每次发版都会有个版本号。那么就需要我们h5去获得这个版本号，每个公司获得的方法不同
-我们公司呢是用">
+我们公司呢是用  当然首要条件需要客户端将版本信息传给我们，前端处理如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="version">
 <meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/24/version/index.html">
@@ -19,14 +19,14 @@ app 每次发版都会有个版本号。那么就需要我们h5去获得这个�
 <meta property="og:description" content="h5 与app 的交互越来越频繁。很多时候需要做一些兼容
 那么问题来了。。怎么做app 版本兼容判断呢
 app 每次发版都会有个版本号。那么就需要我们h5去获得这个版本号，每个公司获得的方法不同
-我们公司呢是用">
-<meta property="og:updated_time" content="2017-03-24T09:46:00.000Z">
+我们公司呢是用  当然首要条件需要客户端将版本信息传给我们，前端处理如下：">
+<meta property="og:updated_time" content="2017-03-24T09:48:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="version">
 <meta name="twitter:description" content="h5 与app 的交互越来越频繁。很多时候需要做一些兼容
 那么问题来了。。怎么做app 版本兼容判断呢
 app 每次发版都会有个版本号。那么就需要我们h5去获得这个版本号，每个公司获得的方法不同
-我们公司呢是用">
+我们公司呢是用  当然首要条件需要客户端将版本信息传给我们，前端处理如下：">
   
   
     <link rel="icon" href="/favicon.png">
@@ -177,7 +177,7 @@ app 每次发版都会有个版本号。那么就需要我们h5去获得这个�
         <p>h5 与app 的交互越来越频繁。很多时候需要做一些兼容</p>
 <p>那么问题来了。。怎么做app 版本兼容判断呢</p>
 <p>app 每次发版都会有个版本号。那么就需要我们h5去获得这个版本号，每个公司获得的方法不同</p>
-<p>我们公司呢是用</p>
+<p>我们公司呢是用  当然首要条件需要客户端将版本信息传给我们，前端处理如下：</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getUrlParam(name) &#123;</div><div class="line">    var reg = new RegExp(&quot;(^|&amp;)&quot; + name + &quot;=([^&amp;]*)(&amp;|$)&quot;);</div><div class="line">    var r = window.location.search.substr(1).match(reg);</div><div class="line">    if (r != null) return decodeURI(r[2]);</div><div class="line">    return null;</div><div class="line">&#125;</div><div class="line">var version = getUrlParam(&apos;version&apos;)的方法获取</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">    var version1=&quot;4.4.0&quot;; //先定义好一个固定版本，一般是线上不兼容新加功能的版本</div><div class="line">    var version2= version; //这个就是获取的版本号，</div><div class="line">    version1 = version1.split(&quot;.&quot;);</div><div class="line">    version2 = version2.split(&quot;.&quot;);</div><div class="line">    var num1=version1[0]*100+version1[1]*10+version1[2]*1;</div><div class="line">    var num2=version2[0]*100+version2[1]*10+version2[2]*1;</div><div class="line">    if(num1&gt;num2)&#123;</div><div class="line">//     alert(&quot;版本一大&quot;)</div><div class="line">    &#125;else&#123;</div><div class="line">//     alert(&quot;版本二大&quot;)</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
