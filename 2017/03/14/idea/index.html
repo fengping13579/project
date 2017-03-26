@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>删除.idea文件 | ping&amp;liu</title>
+  <title>git操作技巧及.idea 文件删除方法 | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="如何删除.idea文件场景描述idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，后来终于发现了删除后不再生成的秘密。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="删除.idea文件">
+<meta property="og:title" content="git操作技巧及.idea 文件删除方法">
 <meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/14/idea/index.html">
 <meta property="og:site_name" content="ping&liu">
 <meta property="og:description" content="如何删除.idea文件场景描述idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，后来终于发现了删除后不再生成的秘密。。">
-<meta property="og:updated_time" content="2017-03-15T06:31:24.000Z">
+<meta property="og:updated_time" content="2017-03-26T12:38:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="删除.idea文件">
+<meta name="twitter:title" content="git操作技巧及.idea 文件删除方法">
 <meta name="twitter:description" content="如何删除.idea文件场景描述idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，后来终于发现了删除后不再生成的秘密。。">
   
   
@@ -152,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      删除.idea文件
+      git操作技巧及.idea 文件删除方法
     </h1>
   
 
@@ -172,7 +172,9 @@
 <p>第二步、删除.idea 文件夹，有两种方法，1、线上git仓库直接删除，不知道的可以百度，2、git pull 拉取线上代码本地删除。用rm -rf 删除</p>
 <p>第三步、将 .gitignore文件提交到远程。自此完成删除工作。</p>
 <p>注：如有不成功可联系我。暂未开通评论功能，敬请等待。。</p>
-
+<h3 id="删除被锁状态"><a href="#删除被锁状态" class="headerlink" title="删除被锁状态"></a>删除被锁状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ rm -rf .git/index.lock</div></pre></td></tr></table></figure>
+<h3 id="获取其他分支上提交的commit"><a href="#获取其他分支上提交的commit" class="headerlink" title="获取其他分支上提交的commit"></a>获取其他分支上提交的commit</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git cherry-pick     获取自己想要的comnit tag</div></pre></td></tr></table></figure>
+<h3 id="退出编辑-先按esc-键-再按shift-ZZ-即可"><a href="#退出编辑-先按esc-键-再按shift-ZZ-即可" class="headerlink" title="退出编辑  先按esc 键  再按shift + ZZ 即可"></a>退出编辑  先按esc 键  再按shift + ZZ 即可</h3><h3 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin :分支名</div></pre></td></tr></table></figure>
       
 
       
@@ -280,11 +282,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/15/introduce/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/15/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          快速构建hexo个人博客
+          Hello World
         
       </div>
     </a>
@@ -305,7 +307,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="idea" data-title="删除.idea文件" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/14/idea/"></div>
+	<div class="ds-thread" data-thread-key="idea" data-title="git操作技巧及.idea 文件删除方法" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/14/idea/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

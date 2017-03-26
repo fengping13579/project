@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>Archives: 2017/3 | ping&amp;liu</title>
+  <title>command | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一次的停滞不前都是为了更高的飞跃">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ping&liu">
-<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/archives/2017/03/page/3/index.html">
+  <meta name="description" content="启动 nginx打开items 输入一下命令
+1sudo nginx
+然后提示输入电脑管理密码即可。。
+苹果电脑下命令行显示分支名称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="command">
+<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/26/command/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta property="og:description" content="启动 nginx打开items 输入一下命令
+1sudo nginx
+然后提示输入电脑管理密码即可。。
+苹果电脑下命令行显示分支名称">
+<meta property="og:updated_time" content="2017-03-26T12:38:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ping&liu">
-<meta name="twitter:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta name="twitter:title" content="command">
+<meta name="twitter:description" content="启动 nginx打开items 输入一下命令
+1sudo nginx
+然后提示输入电脑管理密码即可。。
+苹果电脑下命令行显示分支名称">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,148 +154,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-command" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      command
+    </h1>
+  
+
+        
+        <a href="/2017/03/26/command/" class="archive-article-date">
+  	<time datetime="2017-03-26T11:43:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h2><p>打开items 输入一下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx</div></pre></td></tr></table></figure>
+<p>然后提示输入电脑管理密码即可。。</p>
+<h2 id="苹果电脑下命令行显示分支名称"><a href="#苹果电脑下命令行显示分支名称" class="headerlink" title="苹果电脑下命令行显示分支名称"></a>苹果电脑下命令行显示分支名称</h2><a id="more"></a>
+<h3 id="找到-etc-bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）"><a href="#找到-etc-bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）" class="headerlink" title="找到 /etc/bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）"></a>找到 /etc/bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）</h3><p>用编辑器打开。将以下代码复制进去即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">## Parses out the branch name from .git/HEAD:</div><div class="line">find_git_branch () &#123;</div><div class="line">    local dir=. head</div><div class="line">    until [ &quot;$dir&quot; -ef / ]; do</div><div class="line">        if [ -f &quot;$dir/.git/HEAD&quot; ]; then</div><div class="line">            head=$(&lt; &quot;$dir/.git/HEAD&quot;)</div><div class="line">            if [[ $head = ref:\ refs/heads/* ]]; then</div><div class="line">                git_branch=&quot; → $&#123;head#*/*/&#125;&quot;</div><div class="line">            elif [[ $head != &apos;&apos; ]]; then</div><div class="line">                git_branch=&quot; → (detached)&quot;</div><div class="line">            else</div><div class="line">                git_branch=&quot; → (unknow)&quot;</div><div class="line">            fi</div><div class="line">            return</div><div class="line">        fi</div><div class="line">        dir=&quot;../$dir&quot;</div><div class="line">    done</div><div class="line">    git_branch=&apos;’</div><div class="line">&#125;</div><div class="line"></div><div class="line">PROMPT_COMMAND=&quot;find_git_branch; $PROMPT_COMMAND&quot;</div><div class="line"></div><div class="line"># Here is bash color codes you can use</div><div class="line">  black=$&apos;\[\e[1;30m\]&apos;</div><div class="line">    red=$&apos;\[\e[1;31m\]&apos;</div><div class="line">  green=$&apos;\[\e[1;32m\]&apos;</div><div class="line"> yellow=$&apos;\[\e[1;33m\]&apos;</div><div class="line">   blue=$&apos;\[\e[1;34m\]&apos;</div><div class="line">magenta=$&apos;\[\e[1;35m\]&apos;</div><div class="line">   cyan=$&apos;\[\e[1;36m\]&apos;</div><div class="line">  white=$&apos;\[\e[1;37m\]&apos;</div><div class="line"> normal=$&apos;\[\e[m\]&apos;</div><div class="line"></div><div class="line">PS1=&quot;$white[$magenta\u$white@$green\h$white:$cyan\w$yellow\$git_branch$white]\$ $normal”</div></pre></td></tr></table></figure>
+<h2 id="此命令行可查看项目"><a href="#此命令行可查看项目" class="headerlink" title="此命令行可查看项目"></a>此命令行可查看项目</h2><p>在想要执行的项目里面输入以下命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wc -l $(find . -name &quot;*.java&quot; -o -name &quot;*.xml&quot; -o -name &quot;*.properties&quot; -o -name &quot;*.sh”)</div></pre></td></tr></table></figure></p>
+<h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir +文件夹名字</div><div class="line">touch +文件名字</div></pre></td></tr></table></figure>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -fr 删除文件，问价夹 -f强制删除 -r是递归</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/idea/" class="archive-article-date">
-  	<time datetime="2017-03-14T07:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/idea/">git操作技巧及.idea 文件删除方法</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/26/command/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/second-edit/" class="archive-article-date">
-  	<time datetime="2017-03-13T09:06:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/second-edit/">关于git 使用的若干个坑</a>
-    </h1>
+  
+    <a href="/2017/03/26/module/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">module</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="command" data-title="command" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/26/command/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/first-edit/" class="archive-article-date">
-  	<time datetime="2017-03-13T08:10:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/first-edit/">first edit</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人简介</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/03/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/2017/03/">1</a><a class="page-number" href="/archives/2017/03/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
 
 
           </div>
@@ -308,8 +334,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
