@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>Tag: js | ping&amp;liu</title>
+  <title>share QQ&amp;sina | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一次的停滞不前都是为了更高的飞跃">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ping&liu">
-<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/tags/js/page/2/index.html">
+  <meta name="description" content="分享到QQ空间和新浪微博的方法
+QQ分享测试
+Sina分享测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="share QQ&sina">
+<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/share-QQ-sina/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta property="og:description" content="分享到QQ空间和新浪微博的方法
+QQ分享测试
+Sina分享测试">
+<meta property="og:updated_time" content="2017-04-12T07:27:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ping&liu">
-<meta name="twitter:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta name="twitter:title" content="share QQ&sina">
+<meta name="twitter:description" content="分享到QQ空间和新浪微博的方法
+QQ分享测试
+Sina分享测试">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,36 +151,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-share-QQ-sina" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      share QQ&amp;sina
+    </h1>
+  
+
+        
+        <a href="/2017/04/12/share-QQ-sina/" class="archive-article-date">
+  	<time datetime="2017-04-12T07:17:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>分享到QQ空间和新浪微博的方法</p>
+<p><a class="Share_QQ" style="text-align:center;">QQ分享测试</a></p>
+<p><a class="Share_sina" style="text-align:center;">Sina分享测试</a></p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">//h5端分享至QQ网页版</div><div class="line">$(&quot;.Share_QQ&quot;).click(function()&#123;</div><div class="line">     var desc=&apos;&apos;; /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/</div><div class="line">     var title=&apos;&apos;; /*分享标题(可选)*/</div><div class="line">     var summary=&apos;&apos;; /*分享摘要(可选)*/</div><div class="line">     var pic=&apos;&apos;;//分享出去后显示的小图片</div><div class="line">     var shareUrl=&quot;&quot;;//分享出去后点击进入的链接</div><div class="line">     var href = &apos;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&apos; +shareUrl</div><div class="line">                + &apos;&amp;title=&apos; + title</div><div class="line">                + &apos;&amp;desc=&apos; + desc</div><div class="line">                + &apos;&amp;summary=&apos; + summary</div><div class="line">                + &apos;&amp;pics=&apos; + pic;</div><div class="line">    window.location.href=href;</div><div class="line"> &#125;)</div><div class="line"></div><div class="line">//&lt;script src=&quot;http://qzonestyle.gtimg.cn/qzone/app/qzlike/qzopensl.js#jsdate=20111201&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line"> //h5端分享至微博网页版</div><div class="line">$(&quot;.Share_sina&quot;).click(function()&#123;</div><div class="line">    var title = &apos;&apos;; /*分享标题(可选)*/</div><div class="line">    var appkey = &apos;&apos;; 这个可自己定义一个。</div><div class="line">    var pic = &apos;&apos;; //分享出去后显示的小图片</div><div class="line">    var shareUrl =&quot;&quot;; //分享出去后点击进入的链接</div><div class="line">    var href = &apos;http://service.weibo.com/share/share.php?url=&apos; + shareUrl</div><div class="line">                + &apos;&amp;title=&apos; + title</div><div class="line">                + &apos;&amp;appkey=&apos; + appkey</div><div class="line">                + &apos;&amp;pic=&apos; + pic;</div><div class="line">    window.location.href=href;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -181,157 +211,110 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo技巧</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/share-QQ-sina/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/introduce/" class="archive-article-date">
-  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/introduce/">快速构建hexo个人博客</a>
-    </h1>
+  
+    <a href="/2017/04/11/vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="share-QQ-sina" data-title="share QQ&amp;sina" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/share-QQ-sina/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/14/idea/" class="archive-article-date">
-  	<time datetime="2017-03-14T07:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/14/idea/">git操作技巧及.idea 文件删除方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/13/second-edit/" class="archive-article-date">
-  	<time datetime="2017-03-13T09:06:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/13/second-edit/">关于git 使用的若干个坑</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/js/">&laquo; Prev</a><a class="page-number" href="/tags/js/">1</a><span class="page-number current">2</span>
-    </nav>
-  
 
 
           </div>
@@ -354,9 +337,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
