@@ -146,6 +146,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sort" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/12/sort/">关于数组</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/12/sort/" class="archive-article-date">
+  	<time datetime="2017-04-12T09:01:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍几种不同种类的数组的去重方法</p>
+<h2 id="1-数组按条件排序"><a href="#1-数组按条件排序" class="headerlink" title="1.数组按条件排序"></a>1.数组按条件排序</h2><p>如下数组 先按照 price 排序。当 price 相等时按照 star 排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(6);</div><div class="line">    arr[0] = &#123;price: 1,star: 20&#125;;</div><div class="line">    arr[1] = &#123;price: 5,star: 20&#125;;</div><div class="line">    arr[2] = &#123;price: 3,star: 21&#125;;</div><div class="line">    arr[3] = &#123;price: 4,star: 20&#125;;</div><div class="line">    arr[4] = &#123;price: 10,star: 21&#125;;</div><div class="line">    arr[5] = &#123;price: 10,star: 19&#125;;</div><div class="line">    arr[6] = &#123;price: 10,star: 20&#125;;</div></pre></td></tr></table></figure></p>
+<p>用的方法比较简单。如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">    if(a.price !== b.price)&#123;</div><div class="line">        return a.price -b.price;</div><div class="line">    &#125;else&#123;</div><div class="line">        return a.star- b.star;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">console.log(arr);</div></pre></td></tr></table></figure>
+<h2 id="两个数组去重，生成一个无重复项的数组"><a href="#两个数组去重，生成一个无重复项的数组" class="headerlink" title="两个数组去重，生成一个无重复项的数组"></a>两个数组去重，生成一个无重复项的数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var arrq=[0,1,2,3,4,5,6,7,8,9,10];</div><div class="line">var m=[8,1,4,5,6,3,7];</div><div class="line">for(var u=0;u&lt;arrq.length;u++)&#123;</div><div class="line">    for(var j=0;j&lt;m.length;j++)&#123;</div><div class="line">        if(m[j]==arrq[u])&#123;</div><div class="line">            arrq.splice(u,1);</div><div class="line">            //m.splice(u,1);</div><div class="line">            u--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(arrq);</div><div class="line">//console.log(m);</div></pre></td></tr></table></figure>
+<p>两个数组。用哪个数组.splice(u,1) 就是去掉了这个数组跟另个数组的重复项。。</p>
+<p>也可以同时去掉两个数组中都有的项。。用indexOf。</p>
+<p>项目中的使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var hotlist = index.opts.hotlist;</div><div class="line">var alllist = [];</div><div class="line">if(!!datas.length)&#123;</div><div class="line">    index.opts.cans = true;</div><div class="line">    if(type ==&apos;hot&apos;)&#123;</div><div class="line">        for(var j=0;j&lt;datas.length;j++)&#123;</div><div class="line">            hotlist[j]=datas[j];</div><div class="line">        &#125;</div><div class="line">        getData(hotlist);</div><div class="line">    &#125;else if(type ==&apos;all&apos;)&#123;</div><div class="line">        for(var j=0;j&lt;datas.length;j++)&#123;</div><div class="line">            alllist[j]=datas[j];</div><div class="line">        &#125;</div><div class="line">        for(var u=0;u&lt;hotlist.length;u++)&#123;</div><div class="line">            for(var r=0; r&lt;alllist.length;r++)&#123;</div><div class="line">                if(alllist[r][&apos;id&apos;]==hotlist[u][&apos;id&apos;])&#123;</div><div class="line">                    // console.log(alllist[r][&apos;id&apos;] +&apos;   重复id   &apos;+ hotlist[u][&apos;id&apos;]);</div><div class="line">                    if(u==0)&#123;</div><div class="line">                        u=u;</div><div class="line">                    &#125;else&#123;</div><div class="line">                        u--;</div><div class="line">                    &#125;</div><div class="line">                    alllist.splice(r,1);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(alllist);</div></pre></td></tr></table></figure></p>
+<h2 id="一个数组的去重"><a href="#一个数组的去重" class="headerlink" title="一个数组的去重"></a>一个数组的去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//双重循环方式</div><div class="line">var trr=[1,3,2,4,6,2,3,5,3,5];</div><div class="line">for(var w=0;w&lt;trr.length;w++)&#123;</div><div class="line">    for(var r =w+1 ;r&lt;trr.length;r++)&#123;</div><div class="line">        if(trr[w]==trr[r])&#123;</div><div class="line">            trr.splice(r,1);</div><div class="line">            r--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(trr);</div><div class="line"></div><div class="line">//indexOf 方式</div><div class="line">var trr=[1,3,2,4,6,2,3,5,3,5];</div><div class="line">var tyy =[];</div><div class="line"></div><div class="line">for(var w=0;w&lt;trr.length;w++)&#123;</div><div class="line">    if(tyy.indexOf(trr[w])==-1)&#123;</div><div class="line">        tyy.push(trr[w]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>用最新的 es6 Set方法处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s = new Set([1, 2, 3, 5, 4, 3, 4]);</div><div class="line">s;//Set &#123;1, 2, 3, 5, 4&#125;</div></pre></td></tr></table></figure></p>
+<p>还有几种单数组去重方法。以上介绍的是我比较习惯用的。更多请参考 <a href="https://segmentfault.com/a/1190000003030068" target="_blank" rel="external">单数组去重方法</a></p>
+<h2 id="打乱数组"><a href="#打乱数组" class="headerlink" title="打乱数组"></a>打乱数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a =[1,2,3,4,5,6,7,8,9,10],</div><div class="line">        sign=1;</div><div class="line">a.sort(function(a,b)&#123;</div><div class="line">    sign =(Math.random()&gt;0.5)?1:-1;return (a-b)*sign;</div><div class="line">&#125;);</div><div class="line">console.log(a);</div></pre></td></tr></table></figure>
+<h2 id="生成0-99的数组-不用for循环"><a href="#生成0-99的数组-不用for循环" class="headerlink" title="生成0-99的数组 不用for循环"></a>生成0-99的数组 不用for循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = Array(100).join(&apos;,&apos;).split(&apos;,&apos;).map(function(item,index)&#123;</div><div class="line">    return index;</div><div class="line">&#125;);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-share-QQ-sina" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -328,68 +398,6 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">command line</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-module" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/module/">module</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/26/module/" class="archive-article-date">
-  	<time datetime="2017-03-26T11:30:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> ** 对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，</p>
-<p>也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible.</p>
-<p> ** CMD 推崇依赖就近，AMD 推崇依赖前置。看代码：</p>
-        
-          <a class="article-more-a" href="/2017/03/26/module/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>

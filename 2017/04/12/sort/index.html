@@ -6,17 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>Tag: js | ping&amp;liu</title>
+  <title>关于数组 | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一次的停滞不前都是为了更高的飞跃">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ping&liu">
-<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/tags/js/index.html">
+  <meta name="description" content="介绍几种不同种类的数组的去重方法
+1.数组按条件排序如下数组 先按照 price 排序。当 price 相等时按照 star 排序12345678var arr = new Array(6);    arr[0] = &amp;#123;price: 1,star: 20&amp;#125;;    arr[1] = &amp;#123;price: 5,star: 20&amp;#125;;    arr[2] = &amp;#123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于数组">
+<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/sort/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta property="og:description" content="介绍几种不同种类的数组的去重方法
+1.数组按条件排序如下数组 先按照 price 排序。当 price 相等时按照 star 排序12345678var arr = new Array(6);    arr[0] = &amp;#123;price: 1,star: 20&amp;#125;;    arr[1] = &amp;#123;price: 5,star: 20&amp;#125;;    arr[2] = &amp;#123">
+<meta property="og:updated_time" content="2017-04-12T09:51:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ping&liu">
-<meta name="twitter:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta name="twitter:title" content="关于数组">
+<meta name="twitter:description" content="介绍几种不同种类的数组的去重方法
+1.数组按条件排序如下数组 先按照 price 排序。当 price 相等时按照 star 排序12345678var arr = new Array(6);    arr[0] = &amp;#123;price: 1,star: 20&amp;#125;;    arr[1] = &amp;#123;price: 5,star: 20&amp;#125;;    arr[2] = &amp;#123">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,36 +148,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-sort" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      关于数组
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/sort/" class="archive-article-date">
+
+        
+        <a href="/2017/04/12/sort/" class="archive-article-date">
   	<time datetime="2017-04-12T09:01:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/sort/">关于数组</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍几种不同种类的数组的去重方法</p>
+<h2 id="1-数组按条件排序"><a href="#1-数组按条件排序" class="headerlink" title="1.数组按条件排序"></a>1.数组按条件排序</h2><p>如下数组 先按照 price 排序。当 price 相等时按照 star 排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var arr = new Array(6);</div><div class="line">    arr[0] = &#123;price: 1,star: 20&#125;;</div><div class="line">    arr[1] = &#123;price: 5,star: 20&#125;;</div><div class="line">    arr[2] = &#123;price: 3,star: 21&#125;;</div><div class="line">    arr[3] = &#123;price: 4,star: 20&#125;;</div><div class="line">    arr[4] = &#123;price: 10,star: 21&#125;;</div><div class="line">    arr[5] = &#123;price: 10,star: 19&#125;;</div><div class="line">    arr[6] = &#123;price: 10,star: 20&#125;;</div></pre></td></tr></table></figure></p>
+<p>用的方法比较简单。如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">    if(a.price !== b.price)&#123;</div><div class="line">        return a.price -b.price;</div><div class="line">    &#125;else&#123;</div><div class="line">        return a.star- b.star;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">console.log(arr);</div></pre></td></tr></table></figure>
+<h2 id="两个数组去重，生成一个无重复项的数组"><a href="#两个数组去重，生成一个无重复项的数组" class="headerlink" title="两个数组去重，生成一个无重复项的数组"></a>两个数组去重，生成一个无重复项的数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var arrq=[0,1,2,3,4,5,6,7,8,9,10];</div><div class="line">var m=[8,1,4,5,6,3,7];</div><div class="line">for(var u=0;u&lt;arrq.length;u++)&#123;</div><div class="line">    for(var j=0;j&lt;m.length;j++)&#123;</div><div class="line">        if(m[j]==arrq[u])&#123;</div><div class="line">            arrq.splice(u,1);</div><div class="line">            //m.splice(u,1);</div><div class="line">            u--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(arrq);</div><div class="line">//console.log(m);</div></pre></td></tr></table></figure>
+<p>两个数组。用哪个数组.splice(u,1) 就是去掉了这个数组跟另个数组的重复项。。</p>
+<p>也可以同时去掉两个数组中都有的项。。用indexOf。</p>
+<p>项目中的使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">var hotlist = index.opts.hotlist;</div><div class="line">var alllist = [];</div><div class="line">if(!!datas.length)&#123;</div><div class="line">    index.opts.cans = true;</div><div class="line">    if(type ==&apos;hot&apos;)&#123;</div><div class="line">        for(var j=0;j&lt;datas.length;j++)&#123;</div><div class="line">            hotlist[j]=datas[j];</div><div class="line">        &#125;</div><div class="line">        getData(hotlist);</div><div class="line">    &#125;else if(type ==&apos;all&apos;)&#123;</div><div class="line">        for(var j=0;j&lt;datas.length;j++)&#123;</div><div class="line">            alllist[j]=datas[j];</div><div class="line">        &#125;</div><div class="line">        for(var u=0;u&lt;hotlist.length;u++)&#123;</div><div class="line">            for(var r=0; r&lt;alllist.length;r++)&#123;</div><div class="line">                if(alllist[r][&apos;id&apos;]==hotlist[u][&apos;id&apos;])&#123;</div><div class="line">                    // console.log(alllist[r][&apos;id&apos;] +&apos;   重复id   &apos;+ hotlist[u][&apos;id&apos;]);</div><div class="line">                    if(u==0)&#123;</div><div class="line">                        u=u;</div><div class="line">                    &#125;else&#123;</div><div class="line">                        u--;</div><div class="line">                    &#125;</div><div class="line">                    alllist.splice(r,1);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(alllist);</div></pre></td></tr></table></figure></p>
+<h2 id="一个数组的去重"><a href="#一个数组的去重" class="headerlink" title="一个数组的去重"></a>一个数组的去重</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">//双重循环方式</div><div class="line">var trr=[1,3,2,4,6,2,3,5,3,5];</div><div class="line">for(var w=0;w&lt;trr.length;w++)&#123;</div><div class="line">    for(var r =w+1 ;r&lt;trr.length;r++)&#123;</div><div class="line">        if(trr[w]==trr[r])&#123;</div><div class="line">            trr.splice(r,1);</div><div class="line">            r--;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(trr);</div><div class="line"></div><div class="line">//indexOf 方式</div><div class="line">var trr=[1,3,2,4,6,2,3,5,3,5];</div><div class="line">var tyy =[];</div><div class="line"></div><div class="line">for(var w=0;w&lt;trr.length;w++)&#123;</div><div class="line">    if(tyy.indexOf(trr[w])==-1)&#123;</div><div class="line">        tyy.push(trr[w]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>用最新的 es6 Set方法处理<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var s = new Set([1, 2, 3, 5, 4, 3, 4]);</div><div class="line">s;//Set &#123;1, 2, 3, 5, 4&#125;</div></pre></td></tr></table></figure></p>
+<p>还有几种单数组去重方法。以上介绍的是我比较习惯用的。更多请参考 <a href="https://segmentfault.com/a/1190000003030068" target="_blank" rel="external">单数组去重方法</a></p>
+<h2 id="打乱数组"><a href="#打乱数组" class="headerlink" title="打乱数组"></a>打乱数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var a =[1,2,3,4,5,6,7,8,9,10],</div><div class="line">        sign=1;</div><div class="line">a.sort(function(a,b)&#123;</div><div class="line">    sign =(Math.random()&gt;0.5)?1:-1;return (a-b)*sign;</div><div class="line">&#125;);</div><div class="line">console.log(a);</div></pre></td></tr></table></figure>
+<h2 id="生成0-99的数组-不用for循环"><a href="#生成0-99的数组-不用for循环" class="headerlink" title="生成0-99的数组 不用for循环"></a>生成0-99的数组 不用for循环</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = Array(100).join(&apos;,&apos;).split(&apos;,&apos;).map(function(item,index)&#123;</div><div class="line">    return index;</div><div class="line">&#125;);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -185,141 +221,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/sort/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/12/share-QQ-sina/" class="archive-article-date">
-  	<time datetime="2017-04-12T07:17:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-12</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/12/share-QQ-sina/">share QQ&amp;sina</a>
-    </h1>
+  
+    <a href="/2017/04/12/share-QQ-sina/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">share QQ&amp;sina</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="sort" data-title="关于数组" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/12/sort/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/26/module/" class="archive-article-date">
-  	<time datetime="2017-03-26T11:30:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/26/module/">module</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/24/version/" class="archive-article-date">
-  	<time datetime="2017-03-24T09:36:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/24/version/">version</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">version</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/js/page/2/">2</a><a class="page-number" href="/tags/js/page/3/">3</a><a class="extend next" rel="next" href="/tags/js/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -342,9 +343,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
