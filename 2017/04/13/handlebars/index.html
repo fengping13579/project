@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/ping13579/gulp-webpack-sass-hotChange">
-  <title>ping&amp;liu</title>
+  <title>handlebars | ping&amp;liu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="每一次的停滞不前都是为了更高的飞跃">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ping&liu">
-<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/page/4/index.html">
+  <meta name="description" content="关于引用handlebars
+项目中经常使用的是创建.tpl文件。然后在js 里引入等等。。
+本次想介绍的是在script中放置模板并调用。但其实方法也是异曲同工的。
+12345678910111213141516171819202122232425262728293031&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;!-- 奖品 --&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="handlebars">
+<meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/13/handlebars/index.html">
 <meta property="og:site_name" content="ping&liu">
-<meta property="og:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta property="og:description" content="关于引用handlebars
+项目中经常使用的是创建.tpl文件。然后在js 里引入等等。。
+本次想介绍的是在script中放置模板并调用。但其实方法也是异曲同工的。
+12345678910111213141516171819202122232425262728293031&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;!-- 奖品 --&amp;gt;">
+<meta property="og:updated_time" content="2017-04-13T07:46:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ping&liu">
-<meta name="twitter:description" content="每一次的停滞不前都是为了更高的飞跃">
+<meta name="twitter:title" content="handlebars">
+<meta name="twitter:description" content="关于引用handlebars
+项目中经常使用的是创建.tpl文件。然后在js 里引入等等。。
+本次想介绍的是在script中放置模板并调用。但其实方法也是异曲同工的。
+12345678910111213141516171819202122232425262728293031&amp;lt;div class=&amp;quot;wrap&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;!-- 奖品 --&amp;gt;">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,35 +154,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-handlebars" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/15/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      handlebars
     </h1>
   
 
         
-        <a href="/2017/03/15/hello-world/" class="archive-article-date">
-  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+        <a href="/2017/04/13/handlebars/" class="archive-article-date">
+  	<time datetime="2017-04-13T07:37:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/03/15/hello-world/#more">More >></a>
-        
+        <p>关于引用handlebars</p>
+<p>项目中经常使用的是创建.tpl文件。然后在js 里引入等等。。</p>
+<p>本次想介绍的是在script中放置模板并调用。但其实方法也是异曲同工的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrap&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- 奖品 --&gt;</div><div class="line">&lt;script id=&quot;tpl_prize&quot; type=&quot;text/x-handlebars-template&quot;&gt;</div><div class="line">    &lt;div class=&quot;track-mark&quot;&gt;</div><div class="line">        &lt;div class=&quot;mark-box prize-box fadeIn&quot;&gt;</div><div class="line">            &lt;span class=&quot;track-shut&quot; id=&quot;track-shut&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;p class=&quot;box-content&quot;&gt;</div><div class="line">                &lt;img src=&quot;&#123;&#123;imageUrl&#125;&#125;&quot; class=&quot;box-content-img&quot;/&gt;</div><div class="line">            &lt;/p&gt;</div><div class="line">            &lt;span class=&quot;text_span&quot;&gt;&#123;&#123;couponTitle&#125;&#125;&lt;/span&gt;</div><div class="line">            &lt;p class=&quot;trackpage-btn&quot;&gt;</div><div class="line">                &lt;span class=&quot;track-now-user&quot; id=&quot;track-user&quot;&gt;马上使用&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;track-now-shut&quot; id=&quot;track-shut1&quot;&gt;再翻一次&lt;/span&gt;</div><div class="line">            &lt;/p&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/jquery-1.9.1.min-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/handlebars-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/handlebars_helpers-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    var tpl = $(&quot;#tpl_prize&quot;).html();</div><div class="line">    var html1 = Handlebars.compile(tpl);</div><div class="line">    var template = html1(&#123;</div><div class="line">        imageUrl: &apos;http://cdn.ufenqi.com/cms/img/top04.jpg&apos;,</div><div class="line">        couponTitle: &apos;快来领奖吧笨蛋&apos;</div><div class="line">    &#125;);</div><div class="line">    $(&quot;.wrap&quot;).append(template);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -187,7 +215,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">hexo技巧</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">handlebars</a>
         		</li>
       		
 		</ul>
@@ -198,76 +226,72 @@
       
 
       
-      <div class="clearfix"></div>
-    </div>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
   </div>
-</article>
+</div>
 
-
-
-
-
-
-
-
-  
-    <article id="post-idea" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/14/idea/">git操作技巧及.idea 文件删除方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/14/idea/" class="archive-article-date">
-  	<time datetime="2017-03-14T07:58:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="如何删除-idea文件"><a href="#如何删除-idea文件" class="headerlink" title="如何删除.idea文件"></a>如何删除.idea文件</h2><h4 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h4><p>idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。<br>每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，<br>后来终于发现了删除后不再生成的秘密。。</p>
-        
-          <a class="article-more-a" href="/2017/03/14/idea/#more">More >></a>
-        
-      
-
-      
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/13/handlebars/" alt="微信分享二维码">
     </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
+</div>
 
-      
-
-      
-
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/13/number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">number</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -275,139 +299,28 @@
 
 
   
-    <article id="post-second-edit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/second-edit/">关于git 使用的若干个坑</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/13/second-edit/" class="archive-article-date">
-  	<time datetime="2017-03-13T09:06:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h2><p>有git个人账号，想把本地工程推到github，前面一切顺利到最后git push 就一直<br>ERROR: Permission to XXX.git denied to aaa.<br>这个问题我研究了好久，，我在.ssh 文件夹下特意了删除跟aaa账号有关的文件但还是报错，<br>终于有一天我在一个外国的网站上找到答案了，原来是跟我冲突的账号一直保有登陆记录，我们需要清除登陆记录就行</p>
-        
-          <a class="article-more-a" href="/2017/03/13/second-edit/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="handlebars" data-title="handlebars" data-url="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/04/13/handlebars/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
   
-    <article id="post-first-edit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/13/first-edit/">first edit</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/13/first-edit/" class="archive-article-date">
-  	<time datetime="2017-03-13T08:10:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hello everyOne 欢迎来到我的个人博客，后续将不断添加这几年来作为前端踩过的坑。流过泪的血泪史。欢迎大家拍砖指正。谢谢！！</p>
-<h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>1989年生，2013年毕业于江西师范大学。</p>
-<p>现在就职于北京和创未来网络科技有限公司(优分期)，</p>
-<p>勤奋踏实、工作负责、爱学习、喜爱研究最新技术。</p>
-<p>公司常用技术 fis3+node+sass</p>
-        
-          <a class="article-more-a" href="/2017/03/13/first-edit/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">个人简介</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
 
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
-  
 
 
           </div>
@@ -429,8 +342,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

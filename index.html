@@ -146,6 +146,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-handlebars" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/13/handlebars/">handlebars</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/13/handlebars/" class="archive-article-date">
+  	<time datetime="2017-04-13T07:37:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于引用handlebars</p>
+<p>项目中经常使用的是创建.tpl文件。然后在js 里引入等等。。</p>
+<p>本次想介绍的是在script中放置模板并调用。但其实方法也是异曲同工的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;wrap&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- 奖品 --&gt;</div><div class="line">&lt;script id=&quot;tpl_prize&quot; type=&quot;text/x-handlebars-template&quot;&gt;</div><div class="line">    &lt;div class=&quot;track-mark&quot;&gt;</div><div class="line">        &lt;div class=&quot;mark-box prize-box fadeIn&quot;&gt;</div><div class="line">            &lt;span class=&quot;track-shut&quot; id=&quot;track-shut&quot;&gt;&lt;/span&gt;</div><div class="line">            &lt;p class=&quot;box-content&quot;&gt;</div><div class="line">                &lt;img src=&quot;&#123;&#123;imageUrl&#125;&#125;&quot; class=&quot;box-content-img&quot;/&gt;</div><div class="line">            &lt;/p&gt;</div><div class="line">            &lt;span class=&quot;text_span&quot;&gt;&#123;&#123;couponTitle&#125;&#125;&lt;/span&gt;</div><div class="line">            &lt;p class=&quot;trackpage-btn&quot;&gt;</div><div class="line">                &lt;span class=&quot;track-now-user&quot; id=&quot;track-user&quot;&gt;马上使用&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;track-now-shut&quot; id=&quot;track-shut1&quot;&gt;再翻一次&lt;/span&gt;</div><div class="line">            &lt;/p&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/jquery-1.9.1.min-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/handlebars-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;http://cdn.ufenqi.com/cms/img/handlebars_helpers-201609.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    var tpl = $(&quot;#tpl_prize&quot;).html();</div><div class="line">    var html1 = Handlebars.compile(tpl);</div><div class="line">    var template = html1(&#123;</div><div class="line">        imageUrl: &apos;http://cdn.ufenqi.com/cms/img/top04.jpg&apos;,</div><div class="line">        couponTitle: &apos;快来领奖吧笨蛋&apos;</div><div class="line">    &#125;);</div><div class="line">    $(&quot;.wrap&quot;).append(template);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">handlebars</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -306,82 +370,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/11/vue/">vue</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/11/vue/" class="archive-article-date">
-  	<time datetime="2017-04-11T10:39:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>创建一个vue+webpack+sass+mint-ui项目</p>
-<p>首先node 和npm 是必备的。此处不多加说明</p>
-<p>为了让大家少走弯路可直接去我的github拉取代码 <a href="https://github.com/ping13579/vue-demo.git">vue-demo</a></p>
-<p>然后安装插件依赖。。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd 到项目文件</div><div class="line">npm install</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/11/vue/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">sass</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mint-ui</a>
         		</li>
       		
 		</ul>
