@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://github.com/ping13579/gulp-webpack-sass-hotChange/2017/03/14/idea/index.html">
 <meta property="og:site_name" content="欢迎来到我的个人博客">
 <meta property="og:description" content="如何删除.idea文件场景描述idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，后来终于发现了删除后不再生成的秘密。。">
-<meta property="og:updated_time" content="2017-03-26T12:38:30.000Z">
+<meta property="og:updated_time" content="2017-09-19T08:31:03.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git操作技巧及.idea 文件删除方法">
 <meta name="twitter:description" content="如何删除.idea文件场景描述idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，后来终于发现了删除后不再生成的秘密。。">
@@ -171,7 +171,7 @@
       
         <h2 id="如何删除-idea文件"><a href="#如何删除-idea文件" class="headerlink" title="如何删除.idea文件"></a>如何删除.idea文件</h2><h4 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h4><p>idea，webstorm 大家现在都在用。但有个共同点会生成一个.idea文件夹。<br>每次提交更改都会自动生成或者更改其中的破文件，很是心烦，之前不管怎么删下次提交都会生成，<br>后来终于发现了删除后不再生成的秘密。。</p>
 <a id="more"></a>
-<h3 id="删除法"><a href="#删除法" class="headerlink" title="删除法"></a>删除法</h3><p>第一步、在工程的根目录下建立一个.gitignore ..这个文件的放置地方很重要，放在其他地方都没有，<br>之前删不掉就是因为路径放错了，</p>
+<h3 id="删除法"><a href="#删除法" class="headerlink" title="删除法"></a>删除法</h3><p>第一步、在工程的根目录下建立一个.gitignore ..这个文件的放置地方很重要，放在其他地方都没用，<br>之前删不掉就是因为路径放错了，</p>
 <p>如果在git push 之前第一步做好了那第二步也就不需要了，，我们现在说的是线上已经有了.idea文件夹</p>
 <p>第二步、删除.idea 文件夹，有两种方法，1、线上git仓库直接删除，不知道的可以百度，2、git pull 拉取线上代码本地删除。用rm -rf 删除</p>
 <p>第三步、将 .gitignore文件提交到远程。自此完成删除工作。</p>
@@ -286,11 +286,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/15/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/15/introduce/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          快速构建hexo个人博客
         
       </div>
     </a>
@@ -419,14 +419,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">item</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">command line</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
@@ -439,6 +431,18 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">item</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">command line</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人简介</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">fis3</a>
               </li>
              
@@ -447,19 +451,23 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人简介</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">handlebars</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">git技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -484,14 +492,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mint-ui</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
               </li>
             
             <div class="clearfix"></div>

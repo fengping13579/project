@@ -20,7 +20,7 @@
 1sudo nginx
 然后提示输入电脑管理密码即可。。
 苹果电脑下命令行显示分支名称">
-<meta property="og:updated_time" content="2017-03-26T12:40:38.000Z">
+<meta property="og:updated_time" content="2017-09-19T08:42:06.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="command">
 <meta name="twitter:description" content="启动 nginx打开items 输入一下命令
@@ -184,7 +184,7 @@
 <h2 id="苹果电脑下命令行显示分支名称"><a href="#苹果电脑下命令行显示分支名称" class="headerlink" title="苹果电脑下命令行显示分支名称"></a>苹果电脑下命令行显示分支名称</h2><a id="more"></a>
 <h3 id="找到-etc-bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）"><a href="#找到-etc-bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）" class="headerlink" title="找到 /etc/bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）"></a>找到 /etc/bashrc（我的电脑是mac。其他的是不是这个路径就有待各位验证了，呵呵！！）</h3><p>用编辑器打开。将以下代码复制进去即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">## Parses out the branch name from .git/HEAD:</div><div class="line">find_git_branch () &#123;</div><div class="line">    local dir=. head</div><div class="line">    until [ &quot;$dir&quot; -ef / ]; do</div><div class="line">        if [ -f &quot;$dir/.git/HEAD&quot; ]; then</div><div class="line">            head=$(&lt; &quot;$dir/.git/HEAD&quot;)</div><div class="line">            if [[ $head = ref:\ refs/heads/* ]]; then</div><div class="line">                git_branch=&quot; → $&#123;head#*/*/&#125;&quot;</div><div class="line">            elif [[ $head != &apos;&apos; ]]; then</div><div class="line">                git_branch=&quot; → (detached)&quot;</div><div class="line">            else</div><div class="line">                git_branch=&quot; → (unknow)&quot;</div><div class="line">            fi</div><div class="line">            return</div><div class="line">        fi</div><div class="line">        dir=&quot;../$dir&quot;</div><div class="line">    done</div><div class="line">    git_branch=&apos;’</div><div class="line">&#125;</div><div class="line"></div><div class="line">PROMPT_COMMAND=&quot;find_git_branch; $PROMPT_COMMAND&quot;</div><div class="line"></div><div class="line"># Here is bash color codes you can use</div><div class="line">  black=$&apos;\[\e[1;30m\]&apos;</div><div class="line">    red=$&apos;\[\e[1;31m\]&apos;</div><div class="line">  green=$&apos;\[\e[1;32m\]&apos;</div><div class="line"> yellow=$&apos;\[\e[1;33m\]&apos;</div><div class="line">   blue=$&apos;\[\e[1;34m\]&apos;</div><div class="line">magenta=$&apos;\[\e[1;35m\]&apos;</div><div class="line">   cyan=$&apos;\[\e[1;36m\]&apos;</div><div class="line">  white=$&apos;\[\e[1;37m\]&apos;</div><div class="line"> normal=$&apos;\[\e[m\]&apos;</div><div class="line"></div><div class="line">PS1=&quot;$white[$magenta\u$white@$green\h$white:$cyan\w$yellow\$git_branch$white]\$ $normal”</div></pre></td></tr></table></figure>
-<h2 id="此命令行可查看项目"><a href="#此命令行可查看项目" class="headerlink" title="此命令行可查看项目"></a>此命令行可查看项目</h2><p>在想要执行的项目里面输入以下命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wc -l $(find . -name &quot;*.java&quot; -o -name &quot;*.xml&quot; -o -name &quot;*.properties&quot; -o -name &quot;*.sh”)</div></pre></td></tr></table></figure></p>
+<h2 id="此命令行可查看项目文件总数"><a href="#此命令行可查看项目文件总数" class="headerlink" title="此命令行可查看项目文件总数"></a>此命令行可查看项目文件总数</h2><p>在想要执行的项目里面输入以下命令即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wc -l $(find . -name &quot;*.java&quot; -o -name &quot;*.xml&quot; -o -name &quot;*.properties&quot; -o -name &quot;*.sh”)</div></pre></td></tr></table></figure></p>
 <h3 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir +文件夹名字</div><div class="line">touch +文件名字</div></pre></td></tr></table></figure>
 <h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -fr 删除文件，问价夹 -f强制删除 -r是递归</div></pre></td></tr></table></figure>
 
@@ -428,14 +428,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">item</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">command line</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
@@ -448,6 +440,18 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">item</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">command line</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">个人简介</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">fis3</a>
               </li>
              
@@ -456,19 +460,23 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">个人简介</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">handlebars</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">git技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -493,14 +501,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mint-ui</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
               </li>
             
             <div class="clearfix"></div>
