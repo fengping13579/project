@@ -150,6 +150,66 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/13/number/">number</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/13/number/" class="archive-article-date">
+  	<time datetime="2017-04-13T01:57:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="调用函数-保留小数点两位数"><a href="#调用函数-保留小数点两位数" class="headerlink" title="调用函数 保留小数点两位数"></a>调用函数 保留小数点两位数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function fmoney(s, n)&#123;</div><div class="line">    n = n &gt; 0 &amp;&amp; n &lt;= 20 ? n : 2;</div><div class="line">    s = parseFloat((s + &quot;&quot;).replace(/[^\d\.-]/g, &quot;&quot;)).toFixed(n) + &quot;&quot;;</div><div class="line">    var l = s.split(&quot;.&quot;)[0].split(&quot;&quot;).reverse(),</div><div class="line">            r = s.split(&quot;.&quot;)[1];</div><div class="line">    t = &quot;&quot;;</div><div class="line">    for(i = 0; i &lt; l.length; i ++ )</div><div class="line">    &#123;</div><div class="line">        t += l[i] + ((i + 1) % 3 == 0 &amp;&amp; (i + 1) != l.length ? &quot;,&quot; : &quot;&quot;);</div><div class="line">    &#125;</div><div class="line">    return t.split(&quot;&quot;).reverse().join(&quot;&quot;) + &quot;.&quot; + r;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/04/13/number/#more">More >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-sort" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -349,73 +409,6 @@
 
 
   
-    <article id="post-command" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/command/">command</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/26/command/" class="archive-article-date">
-  	<time datetime="2017-03-26T11:43:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="启动-nginx"><a href="#启动-nginx" class="headerlink" title="启动 nginx"></a>启动 nginx</h2><p>打开items 输入一下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nginx</div></pre></td></tr></table></figure>
-<p>然后提示输入电脑管理密码即可。。</p>
-<h2 id="苹果电脑下命令行显示分支名称"><a href="#苹果电脑下命令行显示分支名称" class="headerlink" title="苹果电脑下命令行显示分支名称"></a>苹果电脑下命令行显示分支名称</h2>
-        
-          <a class="article-more-a" href="/2017/03/26/command/#more">More >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">item</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">command line</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -517,6 +510,18 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">fis3</a>
               </li>
              
@@ -529,19 +534,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
+                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,7 +550,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hexo技巧</a>
+                <a href="javascript:void(0)" class="js-tag color3">version</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -577,7 +570,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">version</a>
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">封装调用</a>
               </li>
             
             <div class="clearfix"></div>
